@@ -16,7 +16,7 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-store.subscribe(()=>{
-  root.render(<App/>)
+// 监测redux中状态的改变，如果redux的状态发生了改变，那么就要重新渲染App组件
+store.subscribe(() => {
+  root.render(<App />)
 })
